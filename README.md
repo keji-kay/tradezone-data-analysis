@@ -1,5 +1,5 @@
 # TradeZone Data Analysis Report
-## HNG Internship Stage 2 — SQL with Business Context
+## HNGi14  Stage 2  SQL with Business Context
 
 This repository contains SQL queries and analysis for the TradeZone e-commerce database as part of the HNG Internship Stage 2 Data Analysis task.
 
