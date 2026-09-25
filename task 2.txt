@@ -1,0 +1,95 @@
+@channel
+DATA ANALYTICS — STAGE 2 TASK
+
+Hello, Data Analysts!
+Welcome to Stage 2: SQL with Business Context.
+Congratulations on making it this far. Now it gets deeper.
+
+TASK EXPLAINER  AIRTABLE
+
+This stage isn’t just about writing SQL queries — it’s about thinking like a business-focused data analyst.
+
+Business Scenario
+You have joined the data team at TradeZone, a fast-growing Nigerian e-commerce platform connecting buyers and sellers across Lagos, Abuja, Kano, Port Harcourt and Ibadan. Over the past two years (2023–2024), the platform has grown quickly but that growth is masking some serious operational problems. Customer retention is dropping. Some sellers are dragging down overall platform ratings. Certain product categories are underperforming despite heavy promotion spend.
+
+The Head of Growth and the Head of Seller Operations have requested a combined data review ahead of the 2025 planning cycle. They do not want a slide deck of charts. They want to understand what is actually happening in the business and what to do about it.
+
+Your job is to clean the data, answer eight specific business questions using SQL and deliver a concise analyst memo that turns your query results into decisions the leadership team can act on.
+
+The Dataset
+The TradeZone database 
+
+Tool Requirement
+Postgres
+
+Part A: Data Cleaning & Preparation
+Before writing any analysis queries, you must clean the dataset. Your SQL file must contain a clearly labelled Cleaning section that addresses each of the following issues. Document any decision you make if you drop a record, explain why in a SQL comment.
+
+Missing Values: Identify and handle NULL or blank entries in critical columnsDuplicate Records: Check for and remove duplicate rows in customers, sellers and orders. Inconsistent Formatting: Standardise city names. Ensure all date columns follow a consistent format (YYYY-MM-DD). Normalise product category names to title case.Data Validation: Verify that each order's total_amount matches the sum of its line items in order_items. Flag orders where the difference is greater than ₦10. Check that all review ratings are between 1 and 5. Check for negative product prices or discount percentages above 100%.
+
+Part B: Business Questions SQL 
+Using your cleaned data, write SQL to answer each of the following eight questions. Number each query clearly to match the question. Every query must be commented on with the business question it answers.
+
+Question 1: Customer Acquisition & 30-Day Conversion
+Find the top 5 states by number of new customer sign-ups in 2024. For each state, calculate what percentage of these new customers made at least one purchase within their first 30 days of signing up.
+
+Question 2: Product Performance
+Identify the top 10 products by total revenue in 2024. Include product name, category, total revenue and total number of orders. Sort by revenue descending.
+
+Question 3: Seller Fulfilment Efficiency
+Calculate the average time in hours between order placement and delivery for each seller. Return the top 20 sellers with the fastest average fulfilment times among sellers who have completed at least 20 orders. Include their total completed orders and average customer rating.
+
+Question 4: Quarterly Revenue Trends
+Compare quarterly revenue across 2023 and 2024. For each quarter, calculate total revenue, average order value and total number of orders. Identify which single quarter showed the strongest revenue growth from 2023 to 2024.
+
+Question 5: Customer Spend Segmentation
+Segment customers based on their total spend in 2024 into three groups:
+ High Spenders: ≥ ₦100,000 Medium Spenders: ₦50,000 – ₦99,999Low Spenders: < ₦50,000For each group, calculate the customer count, average spend per customer and total revenue contribution.
+
+Question 6: Payment Method Preferences by State
+Analyse payment method preferences across each state in the dataset. For each state, show the transaction count and total amount for each payment method (Cash on Delivery, Card, Mobile Money, Bank Transfer) and identify the most popular method per state.
+
+Question 7: Review Ratings and Sales Performance
+Group products based on their average review rating into three categories:
+High Rated: 4.0 and aboveMid Rated: 3.0 – 3.99Low Rated: Below 3.0For each category, calculate the product count, total revenue and average unit price.
+
+Question 8: Top Seller Bonus Qualification
+Identify the top 10 sellers in 2024 by total revenue who completed at least 10 orders and have an average customer rating of 4.0 or above. Include their total orders, average rating, and total revenue.
+
+
+Part C: The Analyst Memo
+This is the most important part of Stage 2. Your SQL queries are the evidence. The memo is what the business actually uses. Write a structured memo (minimum 500 words) addressed to the Head of Growth and Head of Seller Operations.
+
+Required Structure
+1. Executive Summary
+Two to three sentences only. What is the single most important thing leadership needs to know about TradeZone's performance across 2023–2024?
+
+2. Key Findings Three Maximum
+Select the three most significant findings from your eight queries. For each finding: state the specific number or trend, explain what it means for the business and name which query it came from.
+
+3. Recommendations Two Required
+Make exactly two recommendations based on your findings. Each must state: the specific action to take, the team or person responsible and the outcome you would expect within 60 to 90 days. Recommendations must be traceable to a query result and do not recommend things your data does not support.
+
+4. Data Quality Notes
+Briefly describe the two most significant data quality issues you found and what decisions you made. If those decisions turned out to be wrong, what would the impact be on your analysis?
+
+5. What the Data Cannot Tell Us
+Name one business question the leadership team might ask that your current dataset cannot answer and state what additional data you would request to answer it.
+
+Deliverables
+Ensure your Google Drive folder is named exactly HNG14-DA-S2 and is set to "Anyone with the link can view" before submitting.
+Your folder must contain the following files, named exactly as specified:
+Data Cleaning Script — Part 1.sql (your Part A data cleaning work)SQL Query Files — Q1.sql, Q2.sql, Q3.sql, Q4.sql, Q5.sql, Q6.sql, Q7.sql, Q8.sql (one file per query)Database Dump — cleaned_dump (saved with a .sql, .dump, or .txt extension)Analytical Report — Analyst_Memo.pdf (your Part C memo exported as a PDF)NOTE: File and folder names must match exactly as written above — including capitalization and spacing — to ensure your submission is graded correctly by the automated system.
+
+
+Submission:
+There is no Google Form for this stage. To submit, follow the steps below:
+Go to the stage-2-da Slack channelType and send the /submit commandA submission modal/form will pop up — fill in the following:Google Drive Folder Link — the link to your HNG14-DA-S2 folder containing all required filesPDF Report Link — the direct link to your Analyst_Memo.pdf file within the folder
+⚠️NOTE:
+This is how  your folder should look like, if you ask me questions on this you will be penalised
+
+
+
+Data set
+https://drive.google.com/file/d/154st1yoWL0r5lWaH7v1l3hFHtQoj-WSI/view?usp=drive_link
+
